@@ -1,0 +1,16 @@
+{
+  "name": "aceleradev",
+  "version": "1.0.0",
+  "description": "Challenge code for React AceleraDev",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "Vinnys Lins",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
