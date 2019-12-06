@@ -1,16 +1,15 @@
 const axios = require('axios')
+const FormData = require('form-data')
 
 const generateData = () =>
   axios.get(`${process.env.API_URL}/generate-data?token=${process.env.TOKEN}`)
 
 const submitSolution = file => {
-  const data = new FormData()
-  data.set('answer', file)
+  const form = new FormData()
+  form.append('answer', file)
 
-  axios.post(`${process.env.API_URL}/submit-solution?token=${process.env.TOKEN}`, data, {
-    headers: {
-      'Content-Type': 'multipart/form-data'
-    }
+  return axios.post(`${process.env.API_URL}/submit-solution?token=${process.env.TOKEN}`, form, {
+    headers: form.getHeaders()
   })
 }
 
