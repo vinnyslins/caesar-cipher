@@ -9,7 +9,9 @@
   },
   "author": "Vinnys Lins",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
     "nodemon": "^2.0.1"
   }
